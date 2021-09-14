@@ -48,8 +48,14 @@ function addNumberInput(value) {
 }
 
 function setOperation(operator) {
-
     const inputScreen = document.getElementsByClassName('calculator__screen')[0].value;
+    if(this.operator !== null){
+        if(this.operator != operator){
+            calculation()
+            this.operator = operator
+            return;
+        }
+    }
     this.operator = operator;
     if(inputScreen != 0){ //Anda mal si es !== estricamente igual
         calculation()
@@ -126,7 +132,3 @@ function transformPointToComma(value) {
     resultTransform = resultTransform.replace('.', ',')
     return resultTransform;
 }
-
-
-/* Hay un bug, que al EJ hacer: 9 - 4 pero en vez de tocar = tocas +, suma, suplantando el - 
-anterior */
