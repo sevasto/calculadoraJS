@@ -1,6 +1,18 @@
 var operator = null;
 var inputValueMemo = 0; //Va a tener el total de un cálculo
 
+
+// Efecto css follow mouse
+const root = document.documentElement;
+
+document.addEventListener('mousemove', evt => {
+    let x = evt.clientX / innerWidth;
+    let y = evt.clientY / innerHeight;
+
+    root.style.setProperty('--mouse-x', x);
+    root.style.setProperty('--mouse-y', y);
+});
+
 function getContectClick(e) {
     const value = e.target.innerHTML;
     filterAction(value)
@@ -22,7 +34,7 @@ const filterAction = (value) => {
     value === "+" ? setOperation("+") : null
     value === "-" ? setOperation("-") : null
     value === "X" ? setOperation("*") : null
-    value === "/" ? setOperation("/") : null
+    value === "☭" ? setOperation("/") : null
     value === "%" ? setOperation("%") : null
     value === "+/-" ? setOperation("+/-") : null
 

@@ -2,6 +2,7 @@ html {
     background: linear-gradient(to bottom, #45484D 0%, #000000 100%) ;
     background-repeat: no-repeat ;
     height: 100%;
+    background: transparent radial-gradient(at calc(var(--mouse-x, 0) * 100%) calc(var(--mouse-y, 0) * 100%), #75006fd5, #282927) no-repeat 0 0
 }
 
 h1 {
@@ -19,6 +20,7 @@ h1 {
     overflow: hidden;
     border: 1px solid #000000;
     text-align: center;
+    background: transparent radial-gradient(at calc(var(--mouse-x, 0) * 100%) calc(var(--mouse-y, 0) * 100%), #75006fd5, #282927) no-repeat 0 0
 }
 
 .calculator__screen {
@@ -77,3 +79,33 @@ h1 {
 .btn:active{
     opacity: 0.5;
 }
+
+.btn:hover{
+    background: linear-gradient(0.25turn, #222122, #494747, #222122);
+}
+
+.btn-dark:hover{
+    background: linear-gradient(0.25turn, #282927, #4e504d, #282927);
+}
+
+.btn-orange:hover{
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+footer{
+    border-radius: 5px;
+    margin-top: initial;
+    border-top: 1px solid #5d5d5c;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    background: transparent radial-gradient(at calc(var(--mouse-x, 0) * 100%) calc(var(--mouse-y, 0) * 100%), black, #333232) no-repeat 0 0
+}
+
+body {
+    margin: 0;
+}
+
